@@ -4,7 +4,7 @@
 
 We investigated the relationship between four conversation dynamics (i.e., speaking time, turn length, speech rate, and response time) and perceived rapport in two online dyadic interaction settings: conversations and collaborations. This contributes to a deeper understanding of human social behaviour, with implications for enhancing both human-human and human-technology interaction.
 
-Note: Due to confidentiality agreements, the dataset used in this thesis cannot be shared.
+Note: Due to confidentiality agreements, the dataset used in this thesis could not be shared.
 
 ## Files
 
@@ -12,7 +12,7 @@ The data analysis can be found in `data_analysis.ipynb`, with the results availa
 
 ## Installation
 
-To install the packages required in the data analysis, please run this command:
+To install the packages required for data analysis, please run this command:
 
 ```bash
 pip install -r requirements.txt
