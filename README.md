@@ -12,6 +12,8 @@ The data analysis can be found in `data_analysis.ipynb`, with the results availa
 
 ## Installation
 
+To install the packages required in the data analysis, please run this command:
+
 ```bash
 pip install -r requirements.txt
 ```
