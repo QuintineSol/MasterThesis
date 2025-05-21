@@ -1,0 +1,86 @@
+Cumulative Link Mixed Model fitted with the Laplace approximation
+
+formula: 
+rapport ~ self_speaking_rate_median + setting_x_self_speaking_rate_median +  
+    self_speaking_rate_variability + setting_x_self_speaking_rate_variability +  
+    self_speaking_rate_adaptability + setting_x_self_speaking_rate_adaptability +  
+    self_speaking_rate_predictability + setting_x_self_speaking_rate_predictability +  
+    other_speaking_rate_median + setting_x_other_speaking_rate_median +  
+    other_speaking_rate_variability + setting_x_other_speaking_rate_variability +  
+    other_speaking_rate_adaptability + setting_x_other_speaking_rate_adaptability +  
+    other_speaking_rate_predictability + setting_x_other_speaking_rate_predictability +  
+    setting + (1 | dyadID) + (1 | selfPID) + self_age + other_age +  
+    self_sex + other_sex
+data:    df_robustness_combined
+
+ link  threshold nobs logLik  AIC     niter       max.grad cond.H 
+ logit flexible  952  -794.07 1650.15 6142(24539) 1.24e-03 1.0e+03
+
+Random effects:
+ Groups  Name        Variance Std.Dev.
+ dyadID  (Intercept) 1.367    1.169   
+ selfPID (Intercept) 2.126    1.458   
+Number of groups:  dyadID 238,  selfPID 140 
+
+Coefficients:
+                                              Estimate Std. Error z value
+self_speaking_rate_median                    -0.095447   0.144240  -0.662
+setting_x_self_speaking_rate_median           0.064494   0.175008   0.369
+self_speaking_rate_variability               -0.138122   0.125796  -1.098
+setting_x_self_speaking_rate_variability      0.211061   0.178269   1.184
+self_speaking_rate_adaptability              -0.015157   0.121626  -0.125
+setting_x_self_speaking_rate_adaptability    -0.006088   0.178352  -0.034
+self_speaking_rate_predictability            -0.241909   0.126540  -1.912
+setting_x_self_speaking_rate_predictability   0.305902   0.173154   1.767
+other_speaking_rate_median                    0.021650   0.140915   0.154
+setting_x_other_speaking_rate_median         -0.024692   0.180593  -0.137
+other_speaking_rate_variability              -0.143085   0.125014  -1.145
+setting_x_other_speaking_rate_variability     0.352638   0.179711   1.962
+other_speaking_rate_adaptability              0.281286   0.126196   2.229
+setting_x_other_speaking_rate_adaptability   -0.289878   0.179832  -1.612
+other_speaking_rate_predictability           -0.116028   0.130662  -0.888
+setting_x_other_speaking_rate_predictability  0.133219   0.175898   0.757
+setting                                       0.336541   0.177196   1.899
+self_age                                      0.379693   0.162175   2.341
+other_age                                     0.314741   0.109464   2.875
+self_sexMale                                 -0.125738   0.328113  -0.383
+self_sexNon-binary / third gender            -2.125921   1.842608  -1.154
+self_sexPrefer not to say                     0.602448   2.037987   0.296
+other_sexMale                                 0.062358   0.211343   0.295
+other_sexNon-binary / third gender           -2.629226   1.278011  -2.057
+other_sexPrefer not to say                   -0.646287   1.524478  -0.424
+                                             Pr(>|z|)   
+self_speaking_rate_median                     0.50815   
+setting_x_self_speaking_rate_median           0.71249   
+self_speaking_rate_variability                0.27221   
+setting_x_self_speaking_rate_variability      0.23643   
+self_speaking_rate_adaptability               0.90082   
+setting_x_self_speaking_rate_adaptability     0.97277   
+self_speaking_rate_predictability             0.05591 . 
+setting_x_self_speaking_rate_predictability   0.07729 . 
+other_speaking_rate_median                    0.87790   
+setting_x_other_speaking_rate_median          0.89125   
+other_speaking_rate_variability               0.25240   
+setting_x_other_speaking_rate_variability     0.04973 * 
+other_speaking_rate_adaptability              0.02582 * 
+setting_x_other_speaking_rate_adaptability    0.10698   
+other_speaking_rate_predictability            0.37454   
+setting_x_other_speaking_rate_predictability  0.44883   
+setting                                       0.05753 . 
+self_age                                      0.01922 * 
+other_age                                     0.00404 **
+self_sexMale                                  0.70156   
+self_sexNon-binary / third gender             0.24860   
+self_sexPrefer not to say                     0.76753   
+other_sexMale                                 0.76795   
+other_sexNon-binary / third gender            0.03966 * 
+other_sexPrefer not to say                    0.67161   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Threshold coefficients:
+    Estimate Std. Error z value
+1|2  -6.6161     0.5466 -12.105
+2|3  -5.2380     0.4012 -13.056
+3|4  -3.9333     0.3420 -11.499
+4|5   0.1850     0.2763   0.669

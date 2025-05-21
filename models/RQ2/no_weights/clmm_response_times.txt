@@ -1,0 +1,69 @@
+Cumulative Link Mixed Model fitted with the Laplace approximation
+
+formula: 
+rapport ~ self_response_times_median + setting_x_self_response_times_median +  
+    self_response_times_variability + setting_x_self_response_times_variability +  
+    self_response_times_adaptability + setting_x_self_response_times_adaptability +  
+    self_response_times_predictability + setting_x_self_response_times_predictability +  
+    other_response_times_median + setting_x_other_response_times_median +  
+    other_response_times_variability + setting_x_other_response_times_variability +  
+    other_response_times_adaptability + setting_x_other_response_times_adaptability +  
+    other_response_times_predictability + setting_x_other_response_times_predictability +  
+    setting + (1 | dyadID) + (1 | selfPID)
+data:    r_df_combined
+
+ link  threshold nobs logLik  AIC     niter       max.grad cond.H 
+ logit flexible  952  -782.95 1611.89 3797(15168) 4.76e-04 1.2e+02
+
+Random effects:
+ Groups  Name        Variance Std.Dev.
+ dyadID  (Intercept) 1.069    1.034   
+ selfPID (Intercept) 2.524    1.589   
+Number of groups:  dyadID 238,  selfPID 140 
+
+Coefficients:
+                                              Estimate Std. Error z value
+self_response_times_median                    -0.07249    0.15542  -0.466
+setting_x_self_response_times_median          -0.48760    0.24652  -1.978
+self_response_times_variability                0.57434    0.15346   3.742
+setting_x_self_response_times_variability     -0.65878    0.26358  -2.499
+self_response_times_adaptability              -0.24278    0.14070  -1.725
+setting_x_self_response_times_adaptability     0.29736    0.18074   1.645
+self_response_times_predictability            -0.12770    0.12898  -0.990
+setting_x_self_response_times_predictability   0.02202    0.19690   0.112
+other_response_times_median                    0.06772    0.14872   0.455
+setting_x_other_response_times_median         -0.19808    0.25322  -0.782
+other_response_times_variability               0.32168    0.14715   2.186
+setting_x_other_response_times_variability    -0.12540    0.26515  -0.473
+other_response_times_adaptability             -0.07622    0.13989  -0.545
+setting_x_other_response_times_adaptability    0.17312    0.18014   0.961
+other_response_times_predictability           -0.13509    0.12723  -1.062
+setting_x_other_response_times_predictability  0.03280    0.19530   0.168
+setting                                        0.78084    0.19967   3.911
+                                              Pr(>|z|)    
+self_response_times_median                    0.640938    
+setting_x_self_response_times_median          0.047938 *  
+self_response_times_variability               0.000182 ***
+setting_x_self_response_times_variability     0.012443 *  
+self_response_times_adaptability              0.084444 .  
+setting_x_self_response_times_adaptability    0.099929 .  
+self_response_times_predictability            0.322130    
+setting_x_self_response_times_predictability  0.910949    
+other_response_times_median                   0.648850    
+setting_x_other_response_times_median         0.434068    
+other_response_times_variability              0.028808 *  
+setting_x_other_response_times_variability    0.636267    
+other_response_times_adaptability             0.585861    
+setting_x_other_response_times_adaptability   0.336552    
+other_response_times_predictability           0.288354    
+setting_x_other_response_times_predictability 0.866612    
+setting                                        9.2e-05 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Threshold coefficients:
+    Estimate Std. Error z value
+1|2  -6.3014     0.5130 -12.282
+2|3  -4.9073     0.3531 -13.898
+3|4  -3.5714     0.2822 -12.656
+4|5   0.5901     0.2109   2.798

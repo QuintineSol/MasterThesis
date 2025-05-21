@@ -1,0 +1,69 @@
+Cumulative Link Mixed Model fitted with the Laplace approximation
+
+formula: 
+rapport ~ self_turn_lengths_median + setting_x_self_turn_lengths_median +  
+    self_turn_lengths_variability + setting_x_self_turn_lengths_variability +  
+    self_turn_lengths_adaptability + setting_x_self_turn_lengths_adaptability +  
+    self_turn_lengths_predictability + setting_x_self_turn_lengths_predictability +  
+    other_turn_lengths_median + setting_x_other_turn_lengths_median +  
+    other_turn_lengths_variability + setting_x_other_turn_lengths_variability +  
+    other_turn_lengths_adaptability + setting_x_other_turn_lengths_adaptability +  
+    other_turn_lengths_predictability + setting_x_other_turn_lengths_predictability +  
+    setting + (1 | dyadID) + (1 | selfPID)
+data:    r_df_combined
+
+ link  threshold nobs logLik  AIC     niter       max.grad cond.H 
+ logit flexible  952  -797.22 1640.44 4137(16551) 7.11e-04 1.1e+02
+
+Random effects:
+ Groups  Name        Variance Std.Dev.
+ dyadID  (Intercept) 1.581    1.257   
+ selfPID (Intercept) 2.328    1.526   
+Number of groups:  dyadID 238,  selfPID 140 
+
+Coefficients:
+                                             Estimate Std. Error z value
+self_turn_lengths_median                    -0.068317   0.146766  -0.465
+setting_x_self_turn_lengths_median          -0.014496   0.255580  -0.057
+self_turn_lengths_variability                0.103322   0.158620   0.651
+setting_x_self_turn_lengths_variability      0.008761   0.239136   0.037
+self_turn_lengths_adaptability              -0.160752   0.129060  -1.246
+setting_x_self_turn_lengths_adaptability     0.059717   0.182164   0.328
+self_turn_lengths_predictability             0.241245   0.133325   1.809
+setting_x_self_turn_lengths_predictability  -0.196830   0.176949  -1.112
+other_turn_lengths_median                    0.282437   0.148495   1.902
+setting_x_other_turn_lengths_median          0.088522   0.258796   0.342
+other_turn_lengths_variability               0.194430   0.162436   1.197
+setting_x_other_turn_lengths_variability     0.261096   0.243217   1.074
+other_turn_lengths_adaptability              0.002780   0.131147   0.021
+setting_x_other_turn_lengths_adaptability    0.117213   0.186629   0.628
+other_turn_lengths_predictability            0.024561   0.130909   0.188
+setting_x_other_turn_lengths_predictability  0.113597   0.177333   0.641
+setting                                      0.603634   0.183906   3.282
+                                            Pr(>|z|)   
+self_turn_lengths_median                     0.64159   
+setting_x_self_turn_lengths_median           0.95477   
+self_turn_lengths_variability                0.51480   
+setting_x_self_turn_lengths_variability      0.97078   
+self_turn_lengths_adaptability               0.21293   
+setting_x_self_turn_lengths_adaptability     0.74305   
+self_turn_lengths_predictability             0.07038 . 
+setting_x_self_turn_lengths_predictability   0.26599   
+other_turn_lengths_median                    0.05717 . 
+setting_x_other_turn_lengths_median          0.73231   
+other_turn_lengths_variability               0.23132   
+setting_x_other_turn_lengths_variability     0.28304   
+other_turn_lengths_adaptability              0.98309   
+setting_x_other_turn_lengths_adaptability    0.52997   
+other_turn_lengths_predictability            0.85117   
+setting_x_other_turn_lengths_predictability  0.52179   
+setting                                      0.00103 **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Threshold coefficients:
+    Estimate Std. Error z value
+1|2  -6.5378     0.5160 -12.671
+2|3  -5.1392     0.3561 -14.432
+3|4  -3.7966     0.2843 -13.355
+4|5   0.3879     0.2038   1.904

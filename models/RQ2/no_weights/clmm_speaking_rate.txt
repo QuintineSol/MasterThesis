@@ -1,0 +1,69 @@
+Cumulative Link Mixed Model fitted with the Laplace approximation
+
+formula: 
+rapport ~ self_speaking_rate_median + setting_x_self_speaking_rate_median +  
+    self_speaking_rate_variability + setting_x_self_speaking_rate_variability +  
+    self_speaking_rate_adaptability + setting_x_self_speaking_rate_adaptability +  
+    self_speaking_rate_predictability + setting_x_self_speaking_rate_predictability +  
+    other_speaking_rate_median + setting_x_other_speaking_rate_median +  
+    other_speaking_rate_variability + setting_x_other_speaking_rate_variability +  
+    other_speaking_rate_adaptability + setting_x_other_speaking_rate_adaptability +  
+    other_speaking_rate_predictability + setting_x_other_speaking_rate_predictability +  
+    setting + (1 | dyadID) + (1 | selfPID)
+data:    r_df_combined
+
+ link  threshold nobs logLik  AIC     niter       max.grad cond.H 
+ logit flexible  952  -802.47 1650.93 3740(14963) 5.09e-04 9.5e+01
+
+Random effects:
+ Groups  Name        Variance Std.Dev.
+ dyadID  (Intercept) 1.527    1.236   
+ selfPID (Intercept) 2.251    1.500   
+Number of groups:  dyadID 238,  selfPID 140 
+
+Coefficients:
+                                              Estimate Std. Error z value
+self_speaking_rate_median                    -0.107361   0.144352  -0.744
+setting_x_self_speaking_rate_median           0.064527   0.175428   0.368
+self_speaking_rate_variability               -0.144036   0.126332  -1.140
+setting_x_self_speaking_rate_variability      0.207648   0.178494   1.163
+self_speaking_rate_adaptability              -0.008723   0.122023  -0.071
+setting_x_self_speaking_rate_adaptability    -0.009957   0.178896  -0.056
+self_speaking_rate_predictability            -0.247263   0.127086  -1.946
+setting_x_self_speaking_rate_predictability   0.307900   0.173375   1.776
+other_speaking_rate_median                    0.041006   0.139827   0.293
+setting_x_other_speaking_rate_median         -0.021195   0.180390  -0.117
+other_speaking_rate_variability              -0.140449   0.125374  -1.120
+setting_x_other_speaking_rate_variability     0.349201   0.180057   1.939
+other_speaking_rate_adaptability              0.271791   0.126175   2.154
+setting_x_other_speaking_rate_adaptability   -0.295334   0.179740  -1.643
+other_speaking_rate_predictability           -0.120487   0.130539  -0.923
+setting_x_other_speaking_rate_predictability  0.144524   0.175946   0.821
+setting                                       0.341947   0.177104   1.931
+                                             Pr(>|z|)  
+self_speaking_rate_median                      0.4570  
+setting_x_self_speaking_rate_median            0.7130  
+self_speaking_rate_variability                 0.2542  
+setting_x_self_speaking_rate_variability       0.2447  
+self_speaking_rate_adaptability                0.9430  
+setting_x_self_speaking_rate_adaptability      0.9556  
+self_speaking_rate_predictability              0.0517 .
+setting_x_self_speaking_rate_predictability    0.0757 .
+other_speaking_rate_median                     0.7693  
+setting_x_other_speaking_rate_median           0.9065  
+other_speaking_rate_variability                0.2626  
+setting_x_other_speaking_rate_variability      0.0525 .
+other_speaking_rate_adaptability               0.0312 *
+setting_x_other_speaking_rate_adaptability     0.1004  
+other_speaking_rate_predictability             0.3560  
+setting_x_other_speaking_rate_predictability   0.4114  
+setting                                        0.0535 .
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Threshold coefficients:
+    Estimate Std. Error z value
+1|2  -6.5800     0.5142 -12.796
+2|3  -5.1946     0.3547 -14.644
+3|4  -3.8835     0.2858 -13.587
+4|5   0.2407     0.2051   1.174

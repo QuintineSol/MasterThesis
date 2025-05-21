@@ -1,0 +1,153 @@
+Cumulative Link Mixed Model fitted with the Laplace approximation
+
+formula: rapport ~ other_speaking_time + setting_x_other_speaking_time +  
+    self_turn_lengths_median + setting_x_self_turn_lengths_median +  
+    self_turn_lengths_variability + setting_x_self_turn_lengths_variability +  
+    self_turn_lengths_adaptability + setting_x_self_turn_lengths_adaptability +  
+    self_turn_lengths_predictability + setting_x_self_turn_lengths_predictability +  
+    other_turn_lengths_median + setting_x_other_turn_lengths_median +  
+    other_turn_lengths_variability + setting_x_other_turn_lengths_variability +  
+    other_turn_lengths_adaptability + setting_x_other_turn_lengths_adaptability +  
+    other_turn_lengths_predictability + setting_x_other_turn_lengths_predictability +  
+    self_speaking_rate_median + setting_x_self_speaking_rate_median +  
+    self_speaking_rate_variability + setting_x_self_speaking_rate_variability +  
+    self_speaking_rate_adaptability + setting_x_self_speaking_rate_adaptability +  
+    self_speaking_rate_predictability + setting_x_self_speaking_rate_predictability +  
+    other_speaking_rate_median + setting_x_other_speaking_rate_median +  
+    other_speaking_rate_variability + setting_x_other_speaking_rate_variability +  
+    other_speaking_rate_adaptability + setting_x_other_speaking_rate_adaptability +  
+    other_speaking_rate_predictability + setting_x_other_speaking_rate_predictability +  
+    self_response_times_median + setting_x_self_response_times_median +  
+    self_response_times_variability + setting_x_self_response_times_variability +  
+    self_response_times_adaptability + setting_x_self_response_times_adaptability +  
+    self_response_times_predictability + setting_x_self_response_times_predictability +  
+    other_response_times_median + setting_x_other_response_times_median +  
+    other_response_times_variability + setting_x_other_response_times_variability +  
+    other_response_times_adaptability + setting_x_other_response_times_adaptability +  
+    other_response_times_predictability + setting_x_other_response_times_predictability +  
+    setting + (1 | dyadID) + (1 | selfPID)
+data:    r_df_combined
+
+ link  threshold nobs     logLik  AIC     niter        max.grad cond.H 
+ logit flexible  625.5955 -626.39 1366.79 19872(93846) 1.41e-02 1.6e+02
+
+Random effects:
+ Groups  Name        Variance Std.Dev.
+ dyadID  (Intercept) 0.6758   0.822   
+ selfPID (Intercept) 1.8515   1.361   
+Number of groups:  dyadID 238,  selfPID 140 
+
+Coefficients:
+                                               Estimate Std. Error z value
+other_speaking_time                            0.503471   0.225614   2.232
+setting_x_other_speaking_time                 -0.738241   0.348718  -2.117
+self_turn_lengths_median                       0.015978   0.169012   0.095
+setting_x_self_turn_lengths_median            -0.086641   0.311322  -0.278
+self_turn_lengths_variability                 -0.184669   0.217175  -0.850
+setting_x_self_turn_lengths_variability        0.159808   0.316368   0.505
+self_turn_lengths_adaptability                -0.199446   0.145000  -1.375
+setting_x_self_turn_lengths_adaptability       0.052531   0.205114   0.256
+self_turn_lengths_predictability               0.250885   0.147198   1.704
+setting_x_self_turn_lengths_predictability    -0.307238   0.200290  -1.534
+other_turn_lengths_median                     -0.065355   0.202858  -0.322
+setting_x_other_turn_lengths_median            0.670547   0.382296   1.754
+other_turn_lengths_variability                -0.348273   0.200347  -1.738
+setting_x_other_turn_lengths_variability       0.745942   0.316585   2.356
+other_turn_lengths_adaptability               -0.220173   0.144318  -1.526
+setting_x_other_turn_lengths_adaptability      0.416924   0.211357   1.973
+other_turn_lengths_predictability             -0.030802   0.142817  -0.216
+setting_x_other_turn_lengths_predictability    0.147258   0.197250   0.747
+self_speaking_rate_median                      0.254534   0.179419   1.419
+setting_x_self_speaking_rate_median           -0.306718   0.228377  -1.343
+self_speaking_rate_variability                -0.202016   0.149427  -1.352
+setting_x_self_speaking_rate_variability       0.156614   0.219534   0.713
+self_speaking_rate_adaptability                0.037809   0.137123   0.276
+setting_x_self_speaking_rate_adaptability     -0.101320   0.200290  -0.506
+self_speaking_rate_predictability             -0.204115   0.136875  -1.491
+setting_x_self_speaking_rate_predictability    0.316832   0.193265   1.639
+other_speaking_rate_median                     0.115428   0.174679   0.661
+setting_x_other_speaking_rate_median           0.076122   0.231531   0.329
+other_speaking_rate_variability               -0.191293   0.150639  -1.270
+setting_x_other_speaking_rate_variability      0.399686   0.222399   1.797
+other_speaking_rate_adaptability               0.251717   0.143053   1.760
+setting_x_other_speaking_rate_adaptability    -0.268156   0.201845  -1.329
+other_speaking_rate_predictability            -0.128215   0.140225  -0.914
+setting_x_other_speaking_rate_predictability   0.147666   0.194426   0.759
+self_response_times_median                     0.007740   0.183074   0.042
+setting_x_self_response_times_median          -0.678538   0.296246  -2.290
+self_response_times_variability                0.510549   0.197429   2.586
+setting_x_self_response_times_variability     -0.685986   0.321691  -2.132
+self_response_times_adaptability              -0.094425   0.163270  -0.578
+setting_x_self_response_times_adaptability     0.169787   0.209851   0.809
+self_response_times_predictability            -0.146355   0.147286  -0.994
+setting_x_self_response_times_predictability   0.075836   0.229431   0.331
+other_response_times_median                   -0.077145   0.171255  -0.450
+setting_x_other_response_times_median         -0.047702   0.308227  -0.155
+other_response_times_variability               0.520847   0.184444   2.824
+setting_x_other_response_times_variability    -0.276337   0.321660  -0.859
+other_response_times_adaptability              0.066691   0.160434   0.416
+setting_x_other_response_times_adaptability   -0.007478   0.209086  -0.036
+other_response_times_predictability           -0.168895   0.148273  -1.139
+setting_x_other_response_times_predictability  0.114729   0.233743   0.491
+setting                                        1.141805   0.270908   4.215
+                                              Pr(>|z|)    
+other_speaking_time                            0.02564 *  
+setting_x_other_speaking_time                  0.03426 *  
+self_turn_lengths_median                       0.92468    
+setting_x_self_turn_lengths_median             0.78078    
+self_turn_lengths_variability                  0.39514    
+setting_x_self_turn_lengths_variability        0.61347    
+self_turn_lengths_adaptability                 0.16898    
+setting_x_self_turn_lengths_adaptability       0.79787    
+self_turn_lengths_predictability               0.08830 .  
+setting_x_self_turn_lengths_predictability     0.12504    
+other_turn_lengths_median                      0.74732    
+setting_x_other_turn_lengths_median            0.07943 .  
+other_turn_lengths_variability                 0.08215 .  
+setting_x_other_turn_lengths_variability       0.01846 *  
+other_turn_lengths_adaptability                0.12711    
+setting_x_other_turn_lengths_adaptability      0.04854 *  
+other_turn_lengths_predictability              0.82924    
+setting_x_other_turn_lengths_predictability    0.45533    
+self_speaking_rate_median                      0.15600    
+setting_x_self_speaking_rate_median            0.17926    
+self_speaking_rate_variability                 0.17639    
+setting_x_self_speaking_rate_variability       0.47560    
+self_speaking_rate_adaptability                0.78275    
+setting_x_self_speaking_rate_adaptability      0.61295    
+self_speaking_rate_predictability              0.13590    
+setting_x_self_speaking_rate_predictability    0.10114    
+other_speaking_rate_median                     0.50874    
+setting_x_other_speaking_rate_median           0.74233    
+other_speaking_rate_variability                0.20413    
+setting_x_other_speaking_rate_variability      0.07231 .  
+other_speaking_rate_adaptability               0.07848 .  
+setting_x_other_speaking_rate_adaptability     0.18400    
+other_speaking_rate_predictability             0.36053    
+setting_x_other_speaking_rate_predictability   0.44755    
+self_response_times_median                     0.96628    
+setting_x_self_response_times_median           0.02199 *  
+self_response_times_variability                0.00971 ** 
+setting_x_self_response_times_variability      0.03297 *  
+self_response_times_adaptability               0.56304    
+setting_x_self_response_times_adaptability     0.41847    
+self_response_times_predictability             0.32038    
+setting_x_self_response_times_predictability   0.74099    
+other_response_times_median                    0.65237    
+setting_x_other_response_times_median          0.87701    
+other_response_times_variability               0.00474 ** 
+setting_x_other_response_times_variability     0.39029    
+other_response_times_adaptability              0.67764    
+setting_x_other_response_times_adaptability    0.97147    
+other_response_times_predictability            0.25467    
+setting_x_other_response_times_predictability  0.62354    
+setting                                        2.5e-05 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Threshold coefficients:
+    Estimate Std. Error z value
+1|2  -5.2686     0.4820 -10.931
+2|3  -3.6642     0.3425 -10.699
+3|4  -2.2185     0.2768  -8.015
+4|5   1.0138     0.2351   4.312

@@ -1,0 +1,170 @@
+Cumulative Link Mixed Model fitted with the Laplace approximation
+
+formula: rapport ~ other_speaking_time + setting_x_other_speaking_time +  
+    self_turn_lengths_median + setting_x_self_turn_lengths_median +  
+    self_turn_lengths_variability + setting_x_self_turn_lengths_variability +  
+    self_turn_lengths_adaptability + setting_x_self_turn_lengths_adaptability +  
+    self_turn_lengths_predictability + setting_x_self_turn_lengths_predictability +  
+    other_turn_lengths_median + setting_x_other_turn_lengths_median +  
+    other_turn_lengths_variability + setting_x_other_turn_lengths_variability +  
+    other_turn_lengths_adaptability + setting_x_other_turn_lengths_adaptability +  
+    other_turn_lengths_predictability + setting_x_other_turn_lengths_predictability +  
+    self_speaking_rate_median + setting_x_self_speaking_rate_median +  
+    self_speaking_rate_variability + setting_x_self_speaking_rate_variability +  
+    self_speaking_rate_adaptability + setting_x_self_speaking_rate_adaptability +  
+    self_speaking_rate_predictability + setting_x_self_speaking_rate_predictability +  
+    other_speaking_rate_median + setting_x_other_speaking_rate_median +  
+    other_speaking_rate_variability + setting_x_other_speaking_rate_variability +  
+    other_speaking_rate_adaptability + setting_x_other_speaking_rate_adaptability +  
+    other_speaking_rate_predictability + setting_x_other_speaking_rate_predictability +  
+    self_response_times_median + setting_x_self_response_times_median +  
+    self_response_times_variability + setting_x_self_response_times_variability +  
+    self_response_times_adaptability + setting_x_self_response_times_adaptability +  
+    self_response_times_predictability + setting_x_self_response_times_predictability +  
+    other_response_times_median + setting_x_other_response_times_median +  
+    other_response_times_variability + setting_x_other_response_times_variability +  
+    other_response_times_adaptability + setting_x_other_response_times_adaptability +  
+    other_response_times_predictability + setting_x_other_response_times_predictability +  
+    setting + (1 | dyadID) + (1 | selfPID) + self_age + other_age +  
+    self_sex + other_sex
+data:    r_df_robustness_combined
+
+ link  threshold nobs     logLik  AIC     niter        max.grad cond.H 
+ logit flexible  625.5955 -619.98 1369.96 22087(87140) 1.08e-03 1.8e+03
+
+Random effects:
+ Groups  Name        Variance Std.Dev.
+ dyadID  (Intercept) 0.6455   0.8034  
+ selfPID (Intercept) 1.7721   1.3312  
+Number of groups:  dyadID 238,  selfPID 140 
+
+Coefficients:
+                                                Estimate Std. Error z value
+other_speaking_time                            4.676e-01  2.300e-01   2.033
+setting_x_other_speaking_time                 -7.200e-01  3.504e-01  -2.055
+self_turn_lengths_median                      -1.736e-05  1.699e-01   0.000
+setting_x_self_turn_lengths_median            -9.320e-02  3.117e-01  -0.299
+self_turn_lengths_variability                 -2.024e-01  2.181e-01  -0.928
+setting_x_self_turn_lengths_variability        1.764e-01  3.170e-01   0.556
+self_turn_lengths_adaptability                -1.704e-01  1.465e-01  -1.163
+setting_x_self_turn_lengths_adaptability       1.347e-02  2.063e-01   0.065
+self_turn_lengths_predictability               2.778e-01  1.481e-01   1.875
+setting_x_self_turn_lengths_predictability    -3.407e-01  2.016e-01  -1.690
+other_turn_lengths_median                     -6.267e-02  2.048e-01  -0.306
+setting_x_other_turn_lengths_median            6.667e-01  3.841e-01   1.736
+other_turn_lengths_variability                -3.712e-01  2.013e-01  -1.844
+setting_x_other_turn_lengths_variability       7.897e-01  3.175e-01   2.487
+other_turn_lengths_adaptability               -1.821e-01  1.453e-01  -1.253
+setting_x_other_turn_lengths_adaptability      3.720e-01  2.118e-01   1.756
+other_turn_lengths_predictability             -2.228e-02  1.436e-01  -0.155
+setting_x_other_turn_lengths_predictability    1.494e-01  1.978e-01   0.755
+self_speaking_rate_median                      2.379e-01  1.810e-01   1.314
+setting_x_self_speaking_rate_median           -2.840e-01  2.291e-01  -1.240
+self_speaking_rate_variability                -1.865e-01  1.500e-01  -1.243
+setting_x_self_speaking_rate_variability       1.468e-01  2.204e-01   0.666
+self_speaking_rate_adaptability                3.281e-02  1.378e-01   0.238
+setting_x_self_speaking_rate_adaptability     -9.943e-02  2.011e-01  -0.494
+self_speaking_rate_predictability             -1.937e-01  1.377e-01  -1.406
+setting_x_self_speaking_rate_predictability    3.019e-01  1.948e-01   1.550
+other_speaking_rate_median                     8.021e-02  1.771e-01   0.453
+setting_x_other_speaking_rate_median           9.505e-02  2.323e-01   0.409
+other_speaking_rate_variability               -1.796e-01  1.513e-01  -1.187
+setting_x_other_speaking_rate_variability      3.974e-01  2.227e-01   1.784
+other_speaking_rate_adaptability               2.568e-01  1.439e-01   1.785
+setting_x_other_speaking_rate_adaptability    -2.595e-01  2.021e-01  -1.284
+other_speaking_rate_predictability            -1.389e-01  1.409e-01  -0.986
+setting_x_other_speaking_rate_predictability   1.589e-01  1.953e-01   0.814
+self_response_times_median                    -4.130e-03  1.837e-01  -0.022
+setting_x_self_response_times_median          -6.588e-01  2.973e-01  -2.216
+self_response_times_variability                4.835e-01  1.979e-01   2.443
+setting_x_self_response_times_variability     -6.839e-01  3.219e-01  -2.125
+self_response_times_adaptability              -8.988e-02  1.637e-01  -0.549
+setting_x_self_response_times_adaptability     1.855e-01  2.109e-01   0.880
+self_response_times_predictability            -1.791e-01  1.490e-01  -1.202
+setting_x_self_response_times_predictability   9.558e-02  2.309e-01   0.414
+other_response_times_median                   -8.503e-02  1.729e-01  -0.492
+setting_x_other_response_times_median         -1.733e-02  3.103e-01  -0.056
+other_response_times_variability               4.824e-01  1.869e-01   2.582
+setting_x_other_response_times_variability    -2.530e-01  3.228e-01  -0.784
+other_response_times_adaptability              6.801e-02  1.611e-01   0.422
+setting_x_other_response_times_adaptability    3.927e-02  2.104e-01   0.187
+other_response_times_predictability           -1.925e-01  1.498e-01  -1.285
+setting_x_other_response_times_predictability  1.216e-01  2.350e-01   0.517
+setting                                        1.042e+00  2.730e-01   3.818
+self_age                                       3.139e-01  1.592e-01   1.972
+other_age                                      3.069e-01  1.152e-01   2.663
+self_sexMale                                   1.778e-01  3.211e-01   0.554
+self_sexNon-binary / third gender             -1.419e+00  1.806e+00  -0.786
+self_sexPrefer not to say                      1.071e+00  2.066e+00   0.519
+other_sexMale                                  5.383e-02  2.244e-01   0.240
+other_sexNon-binary / third gender            -1.859e+00  1.317e+00  -1.411
+other_sexPrefer not to say                     6.351e-02  1.600e+00   0.040
+                                              Pr(>|z|)    
+other_speaking_time                           0.042042 *  
+setting_x_other_speaking_time                 0.039922 *  
+self_turn_lengths_median                      0.999918    
+setting_x_self_turn_lengths_median            0.764899    
+self_turn_lengths_variability                 0.353489    
+setting_x_self_turn_lengths_variability       0.577971    
+self_turn_lengths_adaptability                0.244704    
+setting_x_self_turn_lengths_adaptability      0.947941    
+self_turn_lengths_predictability              0.060783 .  
+setting_x_self_turn_lengths_predictability    0.090959 .  
+other_turn_lengths_median                     0.759558    
+setting_x_other_turn_lengths_median           0.082625 .  
+other_turn_lengths_variability                0.065188 .  
+setting_x_other_turn_lengths_variability      0.012880 *  
+other_turn_lengths_adaptability               0.210073    
+setting_x_other_turn_lengths_adaptability     0.079038 .  
+other_turn_lengths_predictability             0.876650    
+setting_x_other_turn_lengths_predictability   0.450050    
+self_speaking_rate_median                     0.188680    
+setting_x_self_speaking_rate_median           0.215133    
+self_speaking_rate_variability                0.213863    
+setting_x_self_speaking_rate_variability      0.505366    
+self_speaking_rate_adaptability               0.811832    
+setting_x_self_speaking_rate_adaptability     0.621070    
+self_speaking_rate_predictability             0.159657    
+setting_x_self_speaking_rate_predictability   0.121102    
+other_speaking_rate_median                    0.650647    
+setting_x_other_speaking_rate_median          0.682451    
+other_speaking_rate_variability               0.235231    
+setting_x_other_speaking_rate_variability     0.074358 .  
+other_speaking_rate_adaptability              0.074293 .  
+setting_x_other_speaking_rate_adaptability    0.199243    
+other_speaking_rate_predictability            0.324130    
+setting_x_other_speaking_rate_predictability  0.415875    
+self_response_times_median                    0.982063    
+setting_x_self_response_times_median          0.026684 *  
+self_response_times_variability               0.014554 *  
+setting_x_self_response_times_variability     0.033607 *  
+self_response_times_adaptability              0.582937    
+setting_x_self_response_times_adaptability    0.379059    
+self_response_times_predictability            0.229328    
+setting_x_self_response_times_predictability  0.678950    
+other_response_times_median                   0.622939    
+setting_x_other_response_times_median         0.955461    
+other_response_times_variability              0.009837 ** 
+setting_x_other_response_times_variability    0.433105    
+other_response_times_adaptability             0.673002    
+setting_x_other_response_times_adaptability   0.851920    
+other_response_times_predictability           0.198965    
+setting_x_other_response_times_predictability 0.604964    
+setting                                       0.000135 ***
+self_age                                      0.048626 *  
+other_age                                     0.007736 ** 
+self_sexMale                                  0.579772    
+self_sexNon-binary / third gender             0.431897    
+self_sexPrefer not to say                     0.604093    
+other_sexMale                                 0.810397    
+other_sexNon-binary / third gender            0.158182    
+other_sexPrefer not to say                    0.968342    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Threshold coefficients:
+    Estimate Std. Error z value
+1|2  -5.2666     0.5104 -10.318
+2|3  -3.6568     0.3816  -9.582
+3|4  -2.2090     0.3255  -6.787
+4|5   1.0494     0.2946   3.563

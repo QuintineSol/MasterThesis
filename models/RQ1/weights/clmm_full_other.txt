@@ -1,0 +1,63 @@
+Cumulative Link Mixed Model fitted with the Laplace approximation
+
+formula: 
+rapport ~ other_speaking_time + self_turn_lengths_median + self_turn_lengths_variability +  
+    self_turn_lengths_adaptability + self_turn_lengths_predictability +  
+    other_turn_lengths_median + other_turn_lengths_variability +  
+    other_turn_lengths_adaptability + other_turn_lengths_predictability +  
+    self_speaking_rate_median + self_speaking_rate_variability +  
+    self_speaking_rate_adaptability + self_speaking_rate_predictability +  
+    other_speaking_rate_median + other_speaking_rate_variability +  
+    other_speaking_rate_adaptability + other_speaking_rate_predictability +  
+    self_response_times_median + self_response_times_variability +  
+    self_response_times_adaptability + self_response_times_predictability +  
+    other_response_times_median + other_response_times_variability +  
+    other_response_times_adaptability + other_response_times_predictability +  
+    (1 | dyadID) + (1 | selfPID)
+data:    r_df_conv
+
+ link  threshold nobs     logLik  AIC    niter       max.grad cond.H 
+ logit flexible  313.7728 -339.95 741.91 6553(19662) 5.56e-04 1.0e+02
+
+Random effects:
+ Groups  Name        Variance  Std.Dev. 
+ dyadID  (Intercept) 5.876e-10 2.424e-05
+ selfPID (Intercept) 8.501e-01 9.220e-01
+Number of groups:  dyadID 238,  selfPID 140 
+
+Coefficients:
+                                    Estimate Std. Error z value Pr(>|z|)   
+other_speaking_time                  0.49452    0.21593   2.290  0.02201 * 
+self_turn_lengths_median            -0.02451    0.17699  -0.138  0.88985   
+self_turn_lengths_variability       -0.20263    0.21104  -0.960  0.33699   
+self_turn_lengths_adaptability      -0.20133    0.13228  -1.522  0.12801   
+self_turn_lengths_predictability     0.18008    0.13212   1.363  0.17289   
+other_turn_lengths_median           -0.08991    0.21885  -0.411  0.68120   
+other_turn_lengths_variability      -0.37794    0.19709  -1.918  0.05516 . 
+other_turn_lengths_adaptability     -0.23370    0.13351  -1.750  0.08005 . 
+other_turn_lengths_predictability   -0.04394    0.12798  -0.343  0.73136   
+self_speaking_rate_median            0.14013    0.14883   0.942  0.34644   
+self_speaking_rate_variability      -0.20965    0.13961  -1.502  0.13317   
+self_speaking_rate_adaptability      0.01342    0.12220   0.110  0.91258   
+self_speaking_rate_predictability   -0.28518    0.12110  -2.355  0.01853 * 
+other_speaking_rate_median           0.05649    0.14516   0.389  0.69717   
+other_speaking_rate_variability     -0.15737    0.14033  -1.121  0.26211   
+other_speaking_rate_adaptability     0.22116    0.12719   1.739  0.08207 . 
+other_speaking_rate_predictability  -0.14984    0.12379  -1.210  0.22610   
+self_response_times_median          -0.06215    0.18620  -0.334  0.73855   
+self_response_times_variability      0.38733    0.19650   1.971  0.04871 * 
+self_response_times_adaptability    -0.05532    0.12659  -0.437  0.66213   
+self_response_times_predictability  -0.08933    0.14245  -0.627  0.53062   
+other_response_times_median         -0.08707    0.16532  -0.527  0.59844   
+other_response_times_variability     0.51891    0.18461   2.811  0.00494 **
+other_response_times_adaptability    0.09644    0.12592   0.766  0.44374   
+other_response_times_predictability -0.13776    0.14317  -0.962  0.33592   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Threshold coefficients:
+    Estimate Std. Error z value
+1|2  -5.1390     0.5391  -9.533
+2|3  -3.4104     0.3368 -10.125
+3|4  -2.2004     0.2469  -8.911
+4|5   0.3648     0.1565   2.330

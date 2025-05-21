@@ -1,0 +1,86 @@
+Cumulative Link Mixed Model fitted with the Laplace approximation
+
+formula: 
+rapport ~ self_response_times_median + setting_x_self_response_times_median +  
+    self_response_times_variability + setting_x_self_response_times_variability +  
+    self_response_times_adaptability + setting_x_self_response_times_adaptability +  
+    self_response_times_predictability + setting_x_self_response_times_predictability +  
+    other_response_times_median + setting_x_other_response_times_median +  
+    other_response_times_variability + setting_x_other_response_times_variability +  
+    other_response_times_adaptability + setting_x_other_response_times_adaptability +  
+    other_response_times_predictability + setting_x_other_response_times_predictability +  
+    setting + (1 | dyadID) + (1 | selfPID) + self_age + other_age +  
+    self_sex + other_sex
+data:    df_robustness_combined
+
+ link  threshold nobs logLik  AIC     niter       max.grad cond.H 
+ logit flexible  952  -775.61 1613.22 6248(24964) 1.44e-03 1.3e+03
+
+Random effects:
+ Groups  Name        Variance Std.Dev.
+ dyadID  (Intercept) 0.9919   0.996   
+ selfPID (Intercept) 2.3669   1.538   
+Number of groups:  dyadID 238,  selfPID 140 
+
+Coefficients:
+                                              Estimate Std. Error z value
+self_response_times_median                    -0.07863    0.15606  -0.504
+setting_x_self_response_times_median          -0.47265    0.24693  -1.914
+self_response_times_variability                0.54768    0.15388   3.559
+setting_x_self_response_times_variability     -0.65131    0.26353  -2.471
+self_response_times_adaptability              -0.22225    0.14101  -1.576
+setting_x_self_response_times_adaptability     0.29273    0.18132   1.614
+self_response_times_predictability            -0.14201    0.12952  -1.096
+setting_x_self_response_times_predictability   0.03722    0.19695   0.189
+other_response_times_median                    0.05323    0.14982   0.355
+setting_x_other_response_times_median         -0.18780    0.25393  -0.740
+other_response_times_variability               0.29231    0.14885   1.964
+setting_x_other_response_times_variability    -0.10792    0.26555  -0.406
+other_response_times_adaptability             -0.06610    0.14009  -0.472
+setting_x_other_response_times_adaptability    0.20122    0.18065   1.114
+other_response_times_predictability           -0.15316    0.12796  -1.197
+setting_x_other_response_times_predictability  0.04973    0.19522   0.255
+setting                                        0.73227    0.19984   3.664
+self_age                                       0.36941    0.16611   2.224
+other_age                                      0.26595    0.10606   2.508
+self_sexMale                                   0.06097    0.33474   0.182
+self_sexNon-binary / third gender             -2.36914    1.88269  -1.258
+self_sexPrefer not to say                      1.22728    2.04943   0.599
+other_sexMale                                  0.10385    0.20434   0.508
+other_sexNon-binary / third gender            -2.43344    1.23424  -1.972
+other_sexPrefer not to say                    -0.14723    1.46373  -0.101
+                                              Pr(>|z|)    
+self_response_times_median                    0.614373    
+setting_x_self_response_times_median          0.055611 .  
+self_response_times_variability               0.000372 ***
+setting_x_self_response_times_variability     0.013457 *  
+self_response_times_adaptability              0.115003    
+setting_x_self_response_times_adaptability    0.106427    
+self_response_times_predictability            0.272893    
+setting_x_self_response_times_predictability  0.850104    
+other_response_times_median                   0.722362    
+setting_x_other_response_times_median         0.459557    
+other_response_times_variability              0.049556 *  
+setting_x_other_response_times_variability    0.684446    
+other_response_times_adaptability             0.637047    
+setting_x_other_response_times_adaptability   0.265340    
+other_response_times_predictability           0.231317    
+setting_x_other_response_times_predictability 0.798939    
+setting                                       0.000248 ***
+self_age                                      0.026157 *  
+other_age                                     0.012153 *  
+self_sexMale                                  0.855467    
+self_sexNon-binary / third gender             0.208256    
+self_sexPrefer not to say                     0.549279    
+other_sexMale                                 0.611285    
+other_sexNon-binary / third gender            0.048654 *  
+other_sexPrefer not to say                    0.919878    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Threshold coefficients:
+    Estimate Std. Error z value
+1|2  -6.2620     0.5428 -11.536
+2|3  -4.8735     0.3965 -12.293
+3|4  -3.5436     0.3361 -10.543
+4|5   0.6273     0.2841   2.208

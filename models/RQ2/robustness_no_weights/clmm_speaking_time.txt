@@ -1,0 +1,38 @@
+Cumulative Link Mixed Model fitted with the Laplace approximation
+
+formula: rapport ~ other_speaking_time + setting_x_other_speaking_time +  
+    setting + (1 | dyadID) + (1 | selfPID) + self_age + other_age +  
+    self_sex + other_sex
+data:    df_robustness_combined
+
+ link  threshold nobs logLik  AIC     niter      max.grad cond.H 
+ logit flexible  952  -790.99 1615.99 2022(8073) 1.11e-04 6.7e+02
+
+Random effects:
+ Groups  Name        Variance Std.Dev.
+ dyadID  (Intercept) 1.208    1.099   
+ selfPID (Intercept) 2.261    1.504   
+Number of groups:  dyadID 238,  selfPID 140 
+
+Coefficients:
+                                   Estimate Std. Error z value Pr(>|z|)    
+other_speaking_time                 0.54566    0.12662   4.309 1.64e-05 ***
+setting_x_other_speaking_time      -0.27879    0.16863  -1.653 0.098286 .  
+setting                             0.60366    0.16320   3.699 0.000217 ***
+self_age                            0.40190    0.16398   2.451 0.014249 *  
+other_age                           0.25092    0.10812   2.321 0.020305 *  
+self_sexMale                       -0.01773    0.32940  -0.054 0.957075    
+self_sexNon-binary / third gender  -2.65247    1.85588  -1.429 0.152939    
+self_sexPrefer not to say           0.43002    2.04485   0.210 0.833438    
+other_sexMale                      -0.05982    0.20411  -0.293 0.769463    
+other_sexNon-binary / third gender -2.55542    1.24202  -2.057 0.039641 *  
+other_sexPrefer not to say         -0.38573    1.49110  -0.259 0.795878    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Threshold coefficients:
+    Estimate Std. Error z value
+1|2  -6.4854     0.5442 -11.918
+2|3  -5.0884     0.3960 -12.849
+3|4  -3.7587     0.3350 -11.220
+4|5   0.3551     0.2746   1.293

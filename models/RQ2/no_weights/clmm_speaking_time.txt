@@ -1,0 +1,29 @@
+Cumulative Link Mixed Model fitted with the Laplace approximation
+
+formula: rapport ~ other_speaking_time + setting_x_other_speaking_time +  
+    setting + (1 | dyadID) + (1 | selfPID)
+data:    r_df_combined
+
+ link  threshold nobs logLik  AIC     niter     max.grad cond.H 
+ logit flexible  952  -798.35 1614.71 611(2438) 2.50e-04 5.7e+01
+
+Random effects:
+ Groups  Name        Variance Std.Dev.
+ dyadID  (Intercept) 1.308    1.144   
+ selfPID (Intercept) 2.440    1.562   
+Number of groups:  dyadID 238,  selfPID 140 
+
+Coefficients:
+                              Estimate Std. Error z value Pr(>|z|)    
+other_speaking_time             0.5598     0.1250   4.480 7.48e-06 ***
+setting_x_other_speaking_time  -0.2735     0.1680  -1.628 0.103539    
+setting                         0.6138     0.1631   3.763 0.000168 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Threshold coefficients:
+    Estimate Std. Error z value
+1|2  -6.4334     0.5099 -12.617
+2|3  -5.0321     0.3473 -14.490
+3|4  -3.6960     0.2751 -13.434
+4|5   0.4185     0.1973   2.121

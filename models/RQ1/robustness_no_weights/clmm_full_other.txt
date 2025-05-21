@@ -1,0 +1,72 @@
+Cumulative Link Mixed Model fitted with the Laplace approximation
+
+formula: 
+rapport ~ other_speaking_time + self_turn_lengths_median + self_turn_lengths_variability +  
+    self_turn_lengths_adaptability + self_turn_lengths_predictability +  
+    other_turn_lengths_median + other_turn_lengths_variability +  
+    other_turn_lengths_adaptability + other_turn_lengths_predictability +  
+    self_speaking_rate_median + self_speaking_rate_variability +  
+    self_speaking_rate_adaptability + self_speaking_rate_predictability +  
+    other_speaking_rate_median + other_speaking_rate_variability +  
+    other_speaking_rate_adaptability + other_speaking_rate_predictability +  
+    self_response_times_median + self_response_times_variability +  
+    self_response_times_adaptability + self_response_times_predictability +  
+    other_response_times_median + other_response_times_variability +  
+    other_response_times_adaptability + other_response_times_predictability +  
+    (1 | dyadID) + (1 | selfPID) + self_age + other_age + self_sex +  
+    other_sex
+data:    r_df_robustness_conv
+
+ link  threshold nobs logLik  AIC    niter        max.grad cond.H 
+ logit flexible  476  -422.58 923.16 10605(41093) 4.10e-04 1.1e+03
+
+Random effects:
+ Groups  Name        Variance Std.Dev.
+ dyadID  (Intercept) 0.1183   0.3439  
+ selfPID (Intercept) 1.5869   1.2597  
+Number of groups:  dyadID 238,  selfPID 140 
+
+Coefficients:
+                                     Estimate Std. Error z value Pr(>|z|)   
+other_speaking_time                  0.551215   0.215332   2.560  0.01047 * 
+self_turn_lengths_median            -0.079431   0.176824  -0.449  0.65328   
+self_turn_lengths_variability       -0.233494   0.204468  -1.142  0.25347   
+self_turn_lengths_adaptability      -0.175634   0.124573  -1.410  0.15857   
+self_turn_lengths_predictability     0.105298   0.123629   0.852  0.39437   
+other_turn_lengths_median           -0.173541   0.203320  -0.854  0.39336   
+other_turn_lengths_variability      -0.203228   0.192023  -1.058  0.28989   
+other_turn_lengths_adaptability     -0.108766   0.126461  -0.860  0.38975   
+other_turn_lengths_predictability    0.007233   0.121359   0.060  0.95248   
+self_speaking_rate_median            0.128010   0.152218   0.841  0.40037   
+self_speaking_rate_variability      -0.253779   0.130049  -1.951  0.05101 . 
+self_speaking_rate_adaptability     -0.007443   0.111232  -0.067  0.94665   
+self_speaking_rate_predictability   -0.295945   0.117714  -2.514  0.01193 * 
+other_speaking_rate_median           0.143855   0.139575   1.031  0.30270   
+other_speaking_rate_variability     -0.200172   0.129786  -1.542  0.12299   
+other_speaking_rate_adaptability     0.224426   0.115647   1.941  0.05231 . 
+other_speaking_rate_predictability  -0.128627   0.119552  -1.076  0.28197   
+self_response_times_median           0.087759   0.166590   0.527  0.59833   
+self_response_times_variability      0.525480   0.189417   2.774  0.00553 **
+self_response_times_adaptability    -0.039715   0.119210  -0.333  0.73902   
+self_response_times_predictability  -0.058535   0.133355  -0.439  0.66070   
+other_response_times_median         -0.094469   0.151968  -0.622  0.53418   
+other_response_times_variability     0.467913   0.176026   2.658  0.00786 **
+other_response_times_adaptability    0.033205   0.118078   0.281  0.77854   
+other_response_times_predictability -0.204556   0.133823  -1.529  0.12637   
+self_age                             0.088318   0.155857   0.567  0.57094   
+other_age                            0.132590   0.119203   1.112  0.26601   
+self_sexMale                        -0.130236   0.328697  -0.396  0.69194   
+self_sexNon-binary / third gender   -1.007039   1.781282  -0.565  0.57184   
+self_sexPrefer not to say           -1.805449   1.927426  -0.937  0.34891   
+other_sexMale                       -0.169039   0.243023  -0.696  0.48670   
+other_sexNon-binary / third gender  -1.436785   1.366703  -1.051  0.29313   
+other_sexPrefer not to say          -1.603389   1.613650  -0.994  0.32040   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Threshold coefficients:
+    Estimate Std. Error z value
+1|2  -6.5471     0.7550  -8.672
+2|3  -4.7571     0.4968  -9.575
+3|4  -3.5263     0.3996  -8.824
+4|5   0.0743     0.2503   0.297

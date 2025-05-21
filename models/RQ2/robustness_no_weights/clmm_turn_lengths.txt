@@ -1,0 +1,86 @@
+Cumulative Link Mixed Model fitted with the Laplace approximation
+
+formula: 
+rapport ~ self_turn_lengths_median + setting_x_self_turn_lengths_median +  
+    self_turn_lengths_variability + setting_x_self_turn_lengths_variability +  
+    self_turn_lengths_adaptability + setting_x_self_turn_lengths_adaptability +  
+    self_turn_lengths_predictability + setting_x_self_turn_lengths_predictability +  
+    other_turn_lengths_median + setting_x_other_turn_lengths_median +  
+    other_turn_lengths_variability + setting_x_other_turn_lengths_variability +  
+    other_turn_lengths_adaptability + setting_x_other_turn_lengths_adaptability +  
+    other_turn_lengths_predictability + setting_x_other_turn_lengths_predictability +  
+    setting + (1 | dyadID) + (1 | selfPID) + self_age + other_age +  
+    self_sex + other_sex
+data:    df_robustness_combined
+
+ link  threshold nobs logLik  AIC     niter       max.grad cond.H 
+ logit flexible  952  -789.21 1640.41 6951(27807) 7.16e-04 1.2e+03
+
+Random effects:
+ Groups  Name        Variance Std.Dev.
+ dyadID  (Intercept) 1.449    1.204   
+ selfPID (Intercept) 2.186    1.479   
+Number of groups:  dyadID 238,  selfPID 140 
+
+Coefficients:
+                                             Estimate Std. Error z value
+self_turn_lengths_median                    -0.083712   0.146251  -0.572
+setting_x_self_turn_lengths_median          -0.007483   0.256298  -0.029
+self_turn_lengths_variability                0.079480   0.158385   0.502
+setting_x_self_turn_lengths_variability      0.017934   0.238893   0.075
+self_turn_lengths_adaptability              -0.150637   0.129044  -1.167
+setting_x_self_turn_lengths_adaptability     0.043669   0.181859   0.240
+self_turn_lengths_predictability             0.249284   0.133009   1.874
+setting_x_self_turn_lengths_predictability  -0.216780   0.176879  -1.226
+other_turn_lengths_median                    0.263427   0.148519   1.774
+setting_x_other_turn_lengths_median          0.082145   0.259909   0.316
+other_turn_lengths_variability               0.179050   0.162972   1.099
+setting_x_other_turn_lengths_variability     0.271073   0.243851   1.112
+other_turn_lengths_adaptability              0.024746   0.131113   0.189
+setting_x_other_turn_lengths_adaptability    0.088878   0.186064   0.478
+other_turn_lengths_predictability            0.027956   0.130560   0.214
+setting_x_other_turn_lengths_predictability  0.113580   0.177070   0.641
+setting                                      0.587656   0.183912   3.195
+self_age                                     0.366353   0.165188   2.218
+other_age                                    0.308712   0.111267   2.775
+self_sexMale                                -0.109392   0.329711  -0.332
+self_sexNon-binary / third gender           -2.720241   1.870106  -1.455
+self_sexPrefer not to say                    0.744010   2.064274   0.360
+other_sexMale                                0.062069   0.210248   0.295
+other_sexNon-binary / third gender          -2.572696   1.296598  -1.984
+other_sexPrefer not to say                  -0.677653   1.550876  -0.437
+                                            Pr(>|z|)   
+self_turn_lengths_median                     0.56706   
+setting_x_self_turn_lengths_median           0.97671   
+self_turn_lengths_variability                0.61580   
+setting_x_self_turn_lengths_variability      0.94016   
+self_turn_lengths_adaptability               0.24308   
+setting_x_self_turn_lengths_adaptability     0.81023   
+self_turn_lengths_predictability             0.06090 . 
+setting_x_self_turn_lengths_predictability   0.22036   
+other_turn_lengths_median                    0.07611 . 
+setting_x_other_turn_lengths_median          0.75196   
+other_turn_lengths_variability               0.27192   
+setting_x_other_turn_lengths_variability     0.26630   
+other_turn_lengths_adaptability              0.85030   
+setting_x_other_turn_lengths_adaptability    0.63288   
+other_turn_lengths_predictability            0.83045   
+setting_x_other_turn_lengths_predictability  0.52124   
+setting                                      0.00140 **
+self_age                                     0.02657 * 
+other_age                                    0.00553 **
+self_sexMale                                 0.74005   
+self_sexNon-binary / third gender            0.14578   
+self_sexPrefer not to say                    0.71853   
+other_sexMale                                0.76783   
+other_sexNon-binary / third gender           0.04723 * 
+other_sexPrefer not to say                   0.66215   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Threshold coefficients:
+    Estimate Std. Error z value
+1|2  -6.5825     0.5506 -11.956
+2|3  -5.1913     0.4056 -12.799
+3|4  -3.8563     0.3449 -11.182
+4|5   0.3270     0.2824   1.158

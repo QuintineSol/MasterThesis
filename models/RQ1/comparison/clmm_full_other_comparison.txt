@@ -1,0 +1,9 @@
+Likelihood ratio tests of cumulative link models:
+ 
+                 formula:                       link: threshold:
+unweighted_model as.formula(formula_full_other) logit flexible  
+weighted_model   as.formula(formula_full_other) logit flexible  
+
+                 no.par    AIC  logLik LR.stat df Pr(>Chisq)
+unweighted_model     31 912.54 -425.27                      
+weighted_model       31 741.91 -339.95  170.63  0           
