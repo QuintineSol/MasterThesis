@@ -1,0 +1,14 @@
+parselmouth
+random
+pandas
+os
+matplotlib
+numpy
+openai-whisper
+re
+warnings
+rpy2
+seaborn
+statsmodels
+sklearn
+tqdm
