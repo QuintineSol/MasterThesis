@@ -6,6 +6,10 @@ We investigated the relationship between four conversation dynamics (i.e., speak
 
 Note: Due to confidentiality agreements, the dataset used in this thesis cannot be shared.
 
+## Files
+
+The data analysis can be found in `data_analysis.ipynb`, with the results available in the `models` directory. A visualisation of the extracted conversation dynamics is provided in `dynamics.drawio`.
+
 ## Installation
 
 ```bash
